@@ -15,8 +15,8 @@
 * You might need a refresher on how to manipulate object literals:
   https://www.dyn-web.com/tutorials/object-literal/properties.php
 
-Sample movies array, i.e. INPUT:
-  [
+Sample movies array, i.e. INPUT: 
+let test = [
     {
       name: 'Crazy Rich Asians',
       rating: 93
@@ -33,10 +33,10 @@ Sample movies array, i.e. INPUT:
       name: 'White Boy Rick',
       rating: 60
     }
-  ]
+  ] /*
 
-Expected OUTPUT for this sample:
-  [
+Expected OUTPUT for this sample: 
+ [
     {
       name: 'Crazy Rich Asians',
       rating: 93,
@@ -57,11 +57,30 @@ Expected OUTPUT for this sample:
       rating: 60,
       label: 'fresh'
     }
-  ]
-
- */
+  ] */
 
 function getMoviesFreshness(movies) {
+  return movies.map((element) => {
+    if (element.rating<60){
+     return element = {
+     name : element.name,
+     rating : element.rating,
+     label : 'rotten'
+     }
+    }else if (element.rating>=60&&element.rating<=70){
+      return element = {
+        name : element.name,
+        rating : element.rating,
+        label : 'fresh'
+        }
+    }else{
+      return element = {
+        name : element.name,
+        rating : element.rating,
+        label : 'certified fresh'
+        }
+    }
+  })
 }
 
 

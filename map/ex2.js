@@ -41,10 +41,10 @@ Expected OUTPUT for this sample
   ]
 
 */
-
 function getFoodCategories(foods) {
+ return foods.map((element) => {if (element.isVegetarian===false) {return element = `${element.food} is not suitable for vegetarians`}
+else{return element = `${element.food} is suitable for vegetarians`}})
 }
-
 
 
 // DON'T TOUCH THIS!
