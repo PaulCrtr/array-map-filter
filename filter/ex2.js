@@ -26,6 +26,7 @@ Expected OUTPUT for this sample:
 */
 
 function keepStarks(names) {
+  return names.filter(nm=>nm.endsWith('Stark', nm.length))
 }
 
 // DON'T TOUCH THIS!
